@@ -20,5 +20,5 @@ prepend PATH /apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/bi
 prepend PYTHONPATH /apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python37.zip:/apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7:/apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7/lib-dynload:/apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7/site-packages
 
 # for completeness we can specify the PROJ_LIB from working os.environ
-set PROJ_LIB /apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/share/proj
-set ANACONDA_CHOICE anaconda-6
+setenv PROJ_LIB /apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/share/proj
+setenv ANACONDA_CHOICE anaconda-6
