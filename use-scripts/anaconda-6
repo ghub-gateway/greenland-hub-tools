@@ -1,0 +1,12 @@
+
+conflict ANACONDA_CHOICE
+
+desc "Anaconda is a package manager, an environment manager, a Python distribution, and a collection of over 1,000+ open source packages."
+
+help "https://docs.anaconda.com/new-anaconda-start-here"
+
+version=6
+
+prepend PATH /apps/share64/debian7/anaconda/anaconda-6/bin
+
+tags MATHSCI

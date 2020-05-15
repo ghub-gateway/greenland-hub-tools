@@ -1,0 +1,24 @@
+desc "Pyproj is a Python interface to the PROJ4 library"
+
+help "https://pyproj4.github.io/pyproj/stable/"
+version=2.2.1
+tags MATHSCI
+
+# pyproj is actually installed as a Python environment.
+# It uses Proj4 v6.1.0
+#
+# In a user shell it can also be accessed this way:
+#   conda activate pyproj_anaconda_6
+# and then deactivated:
+#   conda deactivate 
+
+# Path must be updated to use the environment's executables:
+# These were found from "conda info --envs"
+prepend PATH /apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/bin
+
+# also necessary to include python libraries for this environment, in PYTHONPATH:
+prepend PYTHONPATH /apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python37.zip:/apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7:/apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7/lib-dynload:/apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7/site-packages
+
+# for completeness we can specify the PROJ_LIB from working os.environ
+set PROJ_LIB /apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/share/proj
+set ANACONDA_CHOICE anaconda-6

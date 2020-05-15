@@ -1,0 +1,29 @@
+desc "xarray and other netCDF-related packages"
+
+help "https://xarray.pydata.org/en/stable/"
+
+version=0.12.3
+
+tags MATHSCI
+
+# This is actually installed as a Python environment.
+# In a user shell it can also be accessed this way:
+# conda activate xarray_anaconda_6
+# conda deactivate 
+
+# Path must be updated to use the environment's executables:
+# These were found from "conda info --envs"
+# should also bring in libraries to the PYTHONPATH. 
+# fetched from saying 'import sys' then print (join(sys.path))
+
+prepend PYTHONPATH /apps/share64/debian7/anaconda/anaconda-6/envs/xarray_anaconda_6/lib/python37.zip:/apps/share64/debian7/anaconda/anaconda-6/envs/xarray_anaconda_6/lib/python3.7:/apps/share64/debian7/anaconda/anaconda-6/envs/xarray_anaconda_6/lib/python3.7/lib-dynload:/apps/share64/debian7/anaconda/anaconda-6/envs/xarray_anaconda_6/lib/python3.7/site-packages
+
+prepend PATH /apps/share64/debian7/anaconda/anaconda-6/condabin
+prepend PATH /apps/share64/debian7/anaconda/anaconda-6/envs/xarray_anaconda_6/bin
+
+# ensure you have conda look in the right place for 'conda list'
+# otherwise you won't get your environment properly...
+# check with 'sys'
+
+setenv PROJ_LIB /apps/share64/debian7/anaconda/anaconda-6/envs/xarray_anaconda_6/share/proj
+

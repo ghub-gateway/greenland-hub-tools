@@ -1,0 +1,44 @@
+desc "OCTAVE is a numerical computing environment and programming language.  It allows for easy matrix manipulation. It is an alternative to Matlab"
+
+help "http://www.gnu.org/software/octave"
+
+version=4.2.1
+
+tags MATHSCI
+
+# This is actually installed as a Python environment.
+# In a user shell it can also be accessed this way:
+# conda activate octave_anaconda_6
+# conda deactivate 
+
+# Path must be updated to use the environment's executables:
+# These were found from "conda info --envs"
+# should also bring in libraries to the PYTHONPATH. 
+# fetched from saying 'import sys' then print (join(sys.path))
+# from sys.path
+
+prepend PYTHONPATH /apps/share64/debian7/anaconda/anaconda-6/envs/octave_anaconda_6/lib/python37.zip:/apps/share64/debian7/anaconda/anaconda-6/envs/octave_anaconda_6/lib/python3.7:/apps/share64/debian7/anaconda/anaconda-6/envs/octave_anaconda_6/lib/python3.7/lib-dynload:/apps/share64/debian7/anaconda/anaconda-6/envs/octave_anaconda_6/lib/python3.7/site-packages
+
+prepend PATH /apps/share64/debian7/anaconda/anaconda-6/condabin
+prepend PATH /apps/share64/debian7/anaconda/anaconda-6/envs/octave_anaconda_6/bin
+
+# ensure you have conda look in the right place for 'conda list'
+# otherwise you won't get your environment properly...
+# check with 'sys'
+
+# these are all from the octave env's environment varis:
+
+setenv CONDA_EXE /apps/share64/debian7/anaconda/anaconda-6/bin/conda
+
+setenv CONDA_PREFIX_1 /apps/share64/debian7/anaconda/anaconda-6
+
+setenv CONDA_PREFIX /apps/share64/debian7/anaconda/anaconda-6/envs/octave_anaconda_6
+
+setenv OCTAVE_HOME /apps/share64/debian7/anaconda/anaconda-6/envs/octave_anaconda_6
+
+prepend ENVIRON_CONFIG_DIRS /etc/environ.d:/apps/share64/debian7/environ.d:/apps/share/debian7/environ.d
+
+setenv CONDA_PYTHON_EXE /apps/share64/debian7/anaconda/anaconda-6/bin/python
+
+setenv CONDA_DEFAULT_ENV octave_anaconda_6
+
