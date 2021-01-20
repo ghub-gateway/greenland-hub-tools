@@ -1,35 +1,35 @@
 # Conda envs and Hubzero use scripts
 
-On hubs these days we can employ conda envs to manage our Python packages, and we
-have long had hubzero 'use' scripts. 
+On hubs these days we can employ conda envs to manage our Python packages, and we have long had hubzero 'use' scripts. This page will show you how use scripts help you access conda envs from Python and from Jupyter Notebooks.
 
 Use scripts are much like [lmod](https://lmod.readthedocs.io/en/latest/) 
 scripts. They set paths to specified software so you can run it. 
 
-Lately we've been setting the use scripts up 
-with the paths that match a conda env. So when you
-run the use script, the paths are all there as if
-you were inside the conda env. 
+Use scripts can specify a path to a conda env. So, when you run the corresponding use script, all the packages installed in the env become available for you to import and call.
 
-Here we assume: anaconda-6; debian10 container. 
+Here we assume you are running: anaconda-6; debian10 container.
 
 ## Conda envs: Workspace10
 
 To use a conda env on the hub, start a Workspace10 tool. 
-Then, on the command line, you can show the available envs
-associated with the anaconda-6 install:
+On the command line, type the following commands to set the anaconda installation in your path:
 ```
     source /etc/environ.sh
     use anaconda-6
+```
+
+Next, type this command to show the available envs:
+
+```
     conda info --envs
 ```
     
-Then you can activate an env and use it in the Workspace:    
+Then you can activate a specific env and use it in the Workspace:    
 ```
     conda activate <envname>
 ```
-When you next start Python, you can import and use the packages 
-installed in the activated env.
+
+If you then type 'python', you can then import and use the packages installed in the newly activated env on the python command line.
 
 ## Use scripts
 
@@ -72,7 +72,7 @@ env in question. (Need more package installs? Let us know.)
 
 They are listed under /apps, in the current container subdirectory.
 For debian10, that's: 
-`/apps/share64/debian10/environ.d`
+    `/apps/share64/debian10/environ.d`
 
 Bear in mind that they may need tweaks. Tell Jeanette if you aren't
 getting all the needed paths set (we have learned about this stuff
