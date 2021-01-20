@@ -121,5 +121,6 @@ To create an env with packages specified in a .yml file:
 More conda-related tricks can be found here:
 
 Manage [packages](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-pkgs.html) with conda
+
 Manage
 [environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) with conda 
