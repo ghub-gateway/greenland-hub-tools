@@ -1,0 +1,23 @@
+desc "Anaconda environment containing Python packages required by the volcashexpwf tool including cartopy, netCDF4, python-twitter and xarray."
+
+tags MATHSCI
+
+# This environment was initially cloned from the Anaconda xarray_anaconda_6 environment.
+
+# In a user shell it can also be accessed this way:
+# conda activate volcashexpwf_anaconda_6
+# conda deactivate 
+
+# PYTHONPATH must be updated to use the environment's libraries.
+
+prepend PYTHONPATH /apps/share64/debian10/anaconda/anaconda-6/envs/volcashexpwf_anaconda_6/lib/python3.7
+prepend PYTHONPATH /apps/share64/debian10/anaconda/anaconda-6/envs/volcashexpwf_anaconda_6/lib/python3.7/site-packages
+
+# PATH must be updated to use the environments executables
+
+prepend PATH /apps/share64/debian10/anaconda/anaconda-6/condabin
+prepend PATH /apps/share64/debian10/anaconda/anaconda-6/envs/volcashexpwf_anaconda_6/bin
+
+# ensure you have conda look in the right place for 'conda list'
+# otherwise you won't get your environment properly...
+# check with 'sys'

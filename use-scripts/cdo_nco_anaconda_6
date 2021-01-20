@@ -11,17 +11,11 @@ version=1.9.6
 
 tags MATHSCI
 
-# ensure commands like `ncdump` are available:
-#use -r -e netcdf-c-4.2.1.1
-
-# python3 is required:
-#use -r -e anaconda-6
-
 # This is actually installed as a Python environment.
-# In a user shell it can also be accessed this way:
-# conda activate cdo_nco_anaconda_6
-# conda deactivate 
+# In a user shell it can also be activated/deactivated this way:
+# 	conda activate cdo_nco_anaconda_6
+# 	conda deactivate 
 
 # Path must be updated to use the environment's executables:
 # These were found from "conda info --envs"
-prepend PATH /apps/share64/debian7/anaconda/anaconda-6/envs/cdo_nco_anaconda_6/bin
+prepend PATH /apps/share64/debian10/anaconda/anaconda-6/envs/cdo_nco_anaconda_6/bin

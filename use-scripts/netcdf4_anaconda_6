@@ -1,0 +1,18 @@
+desc "netCDF4 is a Python interface to the netCDF C library"
+version=1.5.5
+
+help "https://unidata.github.io/netcdf4-python/netcdf4/index.html"
+tags MATHSCI
+
+# netCDF4 is installed in a conda env.
+#	also installed there are rasterio, georaster, pyproj
+#
+# In a user shell it can also be accessed this way:
+#   conda activate netcdf4_anaconda_6
+# and then deactivated:
+#   conda deactivate 
+
+# Path must be updated to use the environment's executables:
+prepend PATH /apps/share64/debian10/anaconda/anaconda-6/envs/netcdf4_anaconda_6/bin
+
+setenv ANACONDA_CHOICE anaconda-6

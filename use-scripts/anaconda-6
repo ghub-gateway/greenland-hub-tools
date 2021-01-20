@@ -7,6 +7,6 @@ help "https://docs.anaconda.com/new-anaconda-start-here"
 
 version=6
 
-prepend PATH /apps/share64/debian7/anaconda/anaconda-6/bin
+prepend PATH /apps/share64/debian10/anaconda/anaconda-6/bin
 
 tags MATHSCI

@@ -14,11 +14,11 @@ tags MATHSCI
 
 # Path must be updated to use the environment's executables:
 # These were found from "conda info --envs"
-prepend PATH /apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/bin
+prepend PATH /apps/share64/debian10/anaconda/anaconda-6/envs/pyproj_anaconda_6/bin
 
 # also necessary to include python libraries for this environment, in PYTHONPATH:
-prepend PYTHONPATH /apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python37.zip:/apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7:/apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7/lib-dynload:/apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7/site-packages
+prepend PYTHONPATH /apps/share64/debian10/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python37.zip:/apps/share64/debian10/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7:/apps/share64/debian10/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7/lib-dynload:/apps/share64/debian10/anaconda/anaconda-6/envs/pyproj_anaconda_6/lib/python3.7/site-packages
 
 # for completeness we can specify the PROJ_LIB from working os.environ
-setenv PROJ_LIB /apps/share64/debian7/anaconda/anaconda-6/envs/pyproj_anaconda_6/share/proj
+setenv PROJ_LIB /apps/share64/debian10/anaconda/anaconda-6/envs/pyproj_anaconda_6/share/proj
 setenv ANACONDA_CHOICE anaconda-6
