@@ -1,0 +1,27 @@
+desc "Common geospatial applications: netCDF4, cdo, nco, pyproj, rasterio, georaster, gdal"
+tags MATHSCI
+
+# installed in an eponymous Python environment.
+#
+# In a user shell it can also be accessed this way:
+#   conda activate geospatial_anaconda_6
+# and then deactivated:
+#   conda deactivate 
+
+# Path must be updated to use the environment's executables:
+# These were found from "conda info --envs"
+prepend PATH /apps/share64/debian7/anaconda/anaconda-6/envs/geospatial_anaconda_6/bin:/apps/share64/debian7/anaconda/anaconda-6/condabin
+#prepend PATH /apps/share64/debian7/anaconda/anaconda-6/envs/geospatial_anaconda_6/bin
+
+# more selections from env
+setenv GSETTINGS_SCHEMA_DIR /apps/share64/debian7/anaconda/anaconda-6/envs/geospatial_anaconda_6/share/glib-2.0/schemas
+setenv UDUNITS2_XML_PATH /apps/share64/debian7/anaconda/anaconda-6/envs/geospatial_anaconda_6/share/udunits/udunits2.xml
+setenv GDAL_DATA /apps/share64/debian7/anaconda/anaconda-6/envs/geospatial_anaconda_6/share/gdal
+setenv PROJ_NETWORK ON
+
+# for completeness we can specify the PROJ_LIB from working os.environ
+setenv PROJ_LIB /apps/share64/debian7/anaconda/anaconda-6/envs/geospatial_anaconda_6/share/proj
+setenv ANACONDA_CHOICE anaconda-6
+
+# also necessary to include python libraries for this environment, in PYTHONPATH:
+prepend PYTHONPATH /apps/share64/debian7/anaconda/anaconda-6/envs/geospatial_anaconda_6/lib/python3.7:/apps/share64/debian7/anaconda/anaconda-6/envs/geospatial_anaconda_6/lib/python3.7/lib-dynload:/apps/share64/debian7/anaconda/anaconda-6/envs/geospatial_anaconda_6/lib/python3.7/site-packages
