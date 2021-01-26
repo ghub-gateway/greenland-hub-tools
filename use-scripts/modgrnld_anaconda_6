@@ -1,0 +1,24 @@
+desc "netCDF4, rasterio, georaster, pyproj Python packages"
+tags MATHSCI
+
+# netCDF4 is installed in a conda env.
+#	also installed there are rasterio, georaster, pyproj
+#
+# In a user shell it can also be accessed this way:
+#   conda activate modgrnld_anaconda_6
+# and then deactivated:
+#   conda deactivate 
+
+# Path must be updated to use the environment's executables:
+prepend PATH /apps/share64/debian7/anaconda/anaconda-6/envs/modgrnld_anaconda_6/bin:/apps/share64/debian7/anaconda/anaconda-6/condabin
+
+# also necessary to include python libraries for this environment, in PYTHONPATH:
+prepend PYTHONPATH /apps/share64/debian7/anaconda/anaconda-6/envs/modgrnld_anaconda_6/lib/python3.7:/apps/share64/debian7/anaconda/anaconda-6/envs/modgrnld_anaconda_6/lib/python3.7/lib-dynload:/apps/share64/debian7/anaconda/anaconda-6/envs/modgrnld_anaconda_6/lib/python3.7/site-packages
+
+setenv PROJ_LIB /apps/share64/debian7/anaconda/anaconda-6/envs/modgrnld_anaconda_6/share/proj
+
+setenv PROJ_NETWORK ON
+
+setenv GDAL_DATA /apps/share64/debian7/anaconda/anaconda-6/envs/modgrnld_anaconda_6/share/gdal
+
+setenv ANACONDA_CHOICE anaconda-6
